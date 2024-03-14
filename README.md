@@ -15,6 +15,9 @@
 ## Project Overview
 This project aims to analyze the agricultural practices of farmers in Taita Taveta county and identify the key factors that influence their productivity. By examining variables such as education, gender, age bracket, crop details, acreage, fertilizer usage, laborers, and yield, we seek to uncover patterns and insights that can inform strategies for improving agricultural productivity in the region.
 
+![taita](https://github.com/robertto04/Corn-data-python-project/assets/46019410/f334e888-8fd7-4368-82d8-d49c6a2ebe5e)
+
+
 ## Data Source
 The dataset used for this project can be found here: [corn_data](https://www.kaggle.com/datasets/japondo/corn-farming-data)
 
