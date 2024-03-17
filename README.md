@@ -44,18 +44,20 @@ In the initial data cleaning phase, we performed the following tasks:
 
 ## Data Analysis
 ```python
-data['education_code']=data['Education'].astype('category').cat.codes
-data['Gender_code']=data['Gender'].astype('category').cat.codes
-data['age_bracket_code']=data['Age bracket'].astype('category').cat.codes
-data['main_credit_source_code']=data['Main credit source'].astype('category').cat.codes
-data['farm_records_code']=data['Farm records'].astype('category').cat.codes
-data['main_advisory_source_code']=data['Main advisory source'].astype('category').cat.codes
-data['extension_provider_code']=data['Extension provider'].astype('category').cat.codes
-data['advisory_format_code']=data['Advisory format'].astype('category').cat.codes
-data['advisory_language_code']=data['Advisory language'].astype('category').cat.codes
+# average yield per acre
+data.Yield.sum()/data.Acreage.sum()
 
-plt.figure(figsize=(15,8))
-sns.heatmap(data.corr(numeric_only=True), annot=True)
+# What is the average amount of fertilizer used per acre
+data.Fertilizer_per_acre.mean()
+
+# correlation between fertilizer usage and yield
+data[['Fertilizer_per_acre', 'Yield_per_acre']].corr()
+
+# correlation between farm size and yield
+data[['Acreage', 'Yield']].corr()
+
+# analyze location data
+sns.scatterplot(data=data, x='Latitude', y='Longitude', hue='Yield', palette='coolwarm')
 ```
 ## Findings
 1. The majority of farmers appear to be between the ages of 36 to 45, with fewer farmers above the age of 65.
