@@ -6,6 +6,7 @@
 - [Tools](#tools)
 - [Data exploration](#data-exploration)
 - [Data cleaning](#data-cleaning)
+- [Feature engineering](#feature-engineering)
 - [Data analysis](#data-analysis)
 - [Findings](#recommendations)
 - [Recommendations](#recommendations)
@@ -38,9 +39,14 @@ The dataset used for this project can be found here: [corn_data](https://www.kag
 7. Are there any correlations between variables?
 
 ## Data Cleaning
-In the initial data cleaning phase, we performed the following tasks:
+In the initial data cleaning phase, I performed the following tasks:
   1. Handling with missing data.
   2. Handling outliers.
+
+## Feature Engineering
+I created two new columns;
+1. Fertilizer_per_acre; fertilizer used divided by the acreage
+2. Yield_per_acre; yield divided by the acreage
 
 ## Data Analysis
 ```python
